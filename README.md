@@ -1,16 +1,3 @@
-None selected 
-
-Skip to content
-Using Gmail with screen readers
-
-1 of 72,849
-(no subject)
-Inbox
-
-Ashley The Basic <ashleyotero90@gmail.com>
-1:48 PM (1 hour ago)
-to ashleyotero
-
 # C Programming Projects
 
 ## Description
