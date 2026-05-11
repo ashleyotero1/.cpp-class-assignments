@@ -1,42 +1,88 @@
-# C Programming Assignments
+None selected 
+
+Skip to content
+Using Gmail with screen readers
+
+1 of 72,849
+(no subject)
+Inbox
+
+Ashley The Basic <ashleyotero90@gmail.com>
+1:48 PM (1 hour ago)
+to ashleyotero
+
+# C Programming Projects
 
 ## Description
-This repository contains coursework from **SET-151 C Programming #1**.  
-Each project demonstrates programming fundamentals in C, including decision statements and loop control.
 
-## Assignments Included
-1. **Homework2 – Word Problems & Decision Statements**  
-   - Reads user input and performs calculations with conditions.  
-   - Tasks include:
-     - Floating-point formatting (decimal & exponential)  
-     - Age-to-seconds conversion  
-     - Molecule calculations  
-     - Finding largest of four numbers  
-     - Leap year determination  
-     - Tax calculation with multiple conditions  
+This repository contains programming projects completed throughout C Programming I and II coursework. The projects demonstrate core programming concepts, problem solving, structured program design, database interaction, and data processing using the C programming language.
 
-2. **Assignment3 – Loops**  
-   - Demonstrates the use of `for`, `while`, and `do while` loops.  
-   - Tasks include:
-     - Printing numbers from 1 to 100  
-     - Summing sequences (all, odd, even, every 3rd)  
-     - Input validation with loops  
-     - Test score average and letter grade calculation  
-     - Sum of multiples of 3 or 5 below 1000  
-     - Converting uppercase to lowercase letters  
+The coursework progressed from foundational programming concepts to more advanced applications involving file handling, database queries, data validation, modular programming, and user-driven applications.
 
-## Skills Demonstrated
-- C syntax and structure  
-- Input/output with `scanf_s` and `printf`  
-- Decision-making with `if`, `else if`, `else`  
-- Looping (`for`, `while`, `do while`)  
-- Arithmetic series and accumulation  
-- Character input and ASCII manipulation  
-- Readable code with consistent comments  
+Projects include mathematical calculations, loop-based processing, conditional logic, menu-driven systems, structured data management, and database-connected functionality.
 
-## How to Run
-1. Open the `.c` file in **Visual Studio** or any C IDE.  
-2. Build the solution or compile from the command line using:  
-  
-# .cpp-class-assignments
-C++ coursework assignments demonstrating problem-solving, functions, arrays, loops,  and OOP skills.
+---
+
+## Technical Concepts & Skills
+
+- C programming syntax and structure
+- Variables, constants, and data types
+- Conditional statements (`if`, `else`, `switch`)
+- Looping structures (`for`, `while`, `do-while`)
+- Functions and modular programming
+- Arrays and structured data handling
+- Input validation and error checking
+- File input and output
+- Mathematical calculations and formatting
+- Menu-driven applications
+- Database queries and data retrieval
+- Database integration concepts
+- Data processing and record management
+- Debugging and troubleshooting
+- Program testing and logic validation
+
+---
+
+## Projects Included
+
+### Programming Fundamentals
+- Mathematical and scientific calculations
+- Decision statement applications
+- Tax and grade calculations
+- Leap year determination
+- Sequence and pattern generation
+
+### Loop and Data Processing Applications
+- Number sequence processing
+- Average and grade calculations
+- Validation loops
+- Counter and accumulator logic
+- Record-based processing
+
+### Database & Query Applications
+- Database-connected projects
+- Query-based data retrieval
+- Data entry and update functionality
+- Structured record management
+
+---
+
+## Technologies Used
+
+- C
+- SQL
+- Database systems
+- Visual Studio
+- Git and GitHub
+
+Mail Delivery Subsystem
+1:48 PM (1 hour ago)
+to me
+
+Error Icon
+Address not found
+Your message wasn't delivered to ashleyotero@foresthills.edu because the address couldn't be found, or is unable to receive mail.
+LEARN MORE
+The response was:
+The email account that you tried to reach does not exist. Please try double-checking the recipient's email address for typos or unnecessary spaces. For more information, go to https://support.google.com/mail/?p=NoSuchUser
+
