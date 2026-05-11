@@ -62,14 +62,4 @@ Projects include mathematical calculations, loop-based processing, conditional l
 - Visual Studio
 - Git and GitHub
 
-Mail Delivery Subsystem
-1:48 PM (1 hour ago)
-to me
-
-Error Icon
-Address not found
-Your message wasn't delivered to ashleyotero@foresthills.edu because the address couldn't be found, or is unable to receive mail.
-LEARN MORE
-The response was:
-The email account that you tried to reach does not exist. Please try double-checking the recipient's email address for typos or unnecessary spaces. For more information, go to https://support.google.com/mail/?p=NoSuchUser
 
