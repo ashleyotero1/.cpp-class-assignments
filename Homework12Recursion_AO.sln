@@ -1,31 +1,102 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36109.1 d17.14
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Homework12Recursion_AO", "Homework12Recursion_AO\Homework12Recursion_AO.vcxproj", "{6D589AED-3E6B-4FBC-8137-E7293E7D300C}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6D589AED-3E6B-4FBC-8137-E7293E7D300C}.Debug|x64.ActiveCfg = Debug|x64
-		{6D589AED-3E6B-4FBC-8137-E7293E7D300C}.Debug|x64.Build.0 = Debug|x64
-		{6D589AED-3E6B-4FBC-8137-E7293E7D300C}.Debug|x86.ActiveCfg = Debug|Win32
-		{6D589AED-3E6B-4FBC-8137-E7293E7D300C}.Debug|x86.Build.0 = Debug|Win32
-		{6D589AED-3E6B-4FBC-8137-E7293E7D300C}.Release|x64.ActiveCfg = Release|x64
-		{6D589AED-3E6B-4FBC-8137-E7293E7D300C}.Release|x64.Build.0 = Release|x64
-		{6D589AED-3E6B-4FBC-8137-E7293E7D300C}.Release|x86.ActiveCfg = Release|Win32
-		{6D589AED-3E6B-4FBC-8137-E7293E7D300C}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {54E64F8C-B1EB-4D58-8127-F009FC771D5A}
-	EndGlobalSection
-EndGlobal
+#include <stdio.h>
+#include <stdlib.h>
+
+// Maximum recursion depth on my computer: ~32768
+// Computer RAM: 16 GB
+// Largest factorial computed correctly: 20!
+// Largest Fibonacci computed before becoming too slow: F(45)
+
+// Function prototypes
+int AddNumbers1To100Recursively(int intIndex);
+int AddNumbersInRange(int start, int stop);
+long long FactorialRecursively(int n);
+long long FibonacciRecursively(int n);
+
+int main()
+{
+    int total;
+    int i;
+
+    // Step 1 test
+    total = AddNumbers1To100Recursively(0);
+    printf("Sum 1-100 = %d\n\n", total);
+
+    // Step 1 Part 3 test
+    printf("Sum 5-10 = %d\n\n", AddNumbersInRange(5, 10));
+
+    // Step 2 test (Factorials 1–20 in two columns)
+    printf("Factorials 1-20\n\n");
+
+    for (i = 1; i <= 10; i++)
+    {
+        printf("%2d! = %-20lld %2d! = %lld\n",
+            i,
+            FactorialRecursively(i),
+            i + 10,
+            FactorialRecursively(i + 10));
+    }
+
+    printf("\n");
+
+    // Step 3 test (Fibonacci)
+    printf("Fibonacci 1-10\n\n");
+
+    for (i = 1; i <= 10; i++)
+    {
+        printf("Fibonacci(%d) = %lld\n", i, FibonacciRecursively(i));
+    }
+
+    system("pause");
+    return 0;
+}
+
+int AddNumbers1To100Recursively(int intIndex)
+{
+    int intTotal = 0;
+
+    intIndex = intIndex + 1;
+    intTotal = intTotal + intIndex;
+
+    if (intIndex < 100)
+    {
+        intTotal = intTotal + AddNumbers1To100Recursively(intIndex);
+    }
+
+    return intTotal;
+}
+
+int AddNumbersInRange(int start, int stop)
+{
+    if (start == stop)
+    {
+        return start;
+    }
+    else
+    {
+        return start + AddNumbersInRange(start + 1, stop);
+    }
+}
+
+long long FactorialRecursively(int n)
+{
+    if (n <= 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n * FactorialRecursively(n - 1);
+    }
+}
+
+long long FibonacciRecursively(int n)
+{
+    if (n == 1 || n == 2)
+    {
+        return 1;
+    }
+    else
+    {
+        return FibonacciRecursively(n - 1) + FibonacciRecursively(n - 2);
+    }
+}
