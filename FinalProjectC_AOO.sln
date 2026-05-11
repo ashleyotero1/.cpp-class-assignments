@@ -1,31 +1,168 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36109.1 d17.14
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FinalProjectC_AOO", "FinalProjectC_AOO\FinalProjectC_AOO.vcxproj", "{1C385DA7-A096-4344-B5C4-41E82BCFA95B}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1C385DA7-A096-4344-B5C4-41E82BCFA95B}.Debug|x64.ActiveCfg = Debug|x64
-		{1C385DA7-A096-4344-B5C4-41E82BCFA95B}.Debug|x64.Build.0 = Debug|x64
-		{1C385DA7-A096-4344-B5C4-41E82BCFA95B}.Debug|x86.ActiveCfg = Debug|Win32
-		{1C385DA7-A096-4344-B5C4-41E82BCFA95B}.Debug|x86.Build.0 = Debug|Win32
-		{1C385DA7-A096-4344-B5C4-41E82BCFA95B}.Release|x64.ActiveCfg = Release|x64
-		{1C385DA7-A096-4344-B5C4-41E82BCFA95B}.Release|x64.Build.0 = Release|x64
-		{1C385DA7-A096-4344-B5C4-41E82BCFA95B}.Release|x86.ActiveCfg = Release|Win32
-		{1C385DA7-A096-4344-B5C4-41E82BCFA95B}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {51F5CA98-9B81-4BAB-9BFA-A4AF179FD00B}
-	EndGlobalSection
-EndGlobal
+#include <iostream>
+#include "CSuperString.h"
+
+using namespace std;
+
+int main()
+{
+    // #1 - Default constructor
+    {
+        CSuperString ssSource1;
+        ssSource1.Print("#1 - Default constructor");
+    }
+
+    // #2 - Parameterized constructor: const char*
+    {
+        CSuperString ssSource1("I Love Star Trek");
+        ssSource1.Print("#2 - Parameterized constructor: const char*");
+    }
+
+    // #3 - Parameterized constructor: boolean
+    {
+        CSuperString ssSource2(true);
+        CSuperString ssSource3(false);
+
+        ssSource2.Print("#3a - Parameterized constructor: boolean");
+        ssSource3.Print("#3b - Parameterized constructor: boolean");
+    }
+
+    // #4 - Parameterized constructor: char
+    {
+        CSuperString ssSource1('I');
+        ssSource1.Print("#4 - Parameterized constructor: char");
+    }
+
+    // #5 - Parameterized constructor: short
+    {
+        CSuperString ssSource1((short)32767);
+        ssSource1.Print("#5 - Parameterized constructor: short");
+    }
+
+    // #6 - Copy constructor
+    {
+        CSuperString ssSource1("I Love Star Trek");
+
+        {
+            CSuperString ssSource2(ssSource1);
+            ssSource2.Print("#6a - Copy constructor");
+        }
+
+        ssSource1.Print("#6b - Original unaffected");
+    }
+
+    // #7 - Assignment operator const char*
+    {
+        CSuperString ssSource1;
+        ssSource1 = "Hello World";
+        ssSource1.Print("#7 - Assignment operator const char*");
+    }
+
+    // #8 - Assignment operator char
+    {
+        CSuperString ssSource1;
+        ssSource1 = 'A';
+        ssSource1.Print("#8 - Assignment operator char");
+    }
+
+    // #9 - Assignment operator object
+    {
+        CSuperString ssSource1("Original");
+        CSuperString ssSource2;
+
+        ssSource2 = ssSource1;
+        ssSource2.Print("#9a - Assignment operator object");
+
+        ssSource1.Print("#9b - Original unchanged");
+    }
+
+    // #10 - Length
+    {
+        CSuperString ssSource1("I Love Star Trek");
+        cout << "#10 - Length" << endl;
+        cout << ssSource1.Length() << endl << endl;
+    }
+
+    // #11 - ToString
+    {
+        CSuperString ssSource1("I Love Star Trek");
+        cout << "#11 - ToString" << endl;
+        cout << ssSource1.ToString() << endl << endl;
+    }
+
+    // #12 - operator +=
+    {
+        CSuperString ssSource1("Hello");
+        ssSource1 += " World";
+
+        ssSource1.Print("#12 - operator +=");
+    }
+
+    // #13 - operator +
+    {
+        CSuperString ssSource1("Hello");
+
+        CSuperString ssResult = ssSource1 + " World";
+
+        ssResult.Print("#13 - operator +");
+    }
+
+    // #14 - FindFirstIndexOf
+    {
+        CSuperString ssSource1("I Love Star Trek");
+
+        cout << "#14 - FindFirstIndexOf" << endl;
+        cout << ssSource1.FindFirstIndexOf('o') << endl << endl;
+    }
+
+    // #15 - FindLastIndexOf
+    {
+        CSuperString ssSource1("I Love Star Trek");
+
+        cout << "#15 - FindLastIndexOf" << endl;
+        cout << ssSource1.FindLastIndexOf('o') << endl << endl;
+    }
+
+    // #16 - ToUpperCase
+    {
+        CSuperString ssSource1("I Love Star Trek");
+
+        cout << "#16 - ToUpperCase" << endl;
+        cout << ssSource1.ToUpperCase() << endl << endl;
+    }
+
+    // #17 - ToLowerCase
+    {
+        CSuperString ssSource1("I Love Star Trek");
+
+        cout << "#17 - ToLowerCase" << endl;
+        cout << ssSource1.ToLowerCase() << endl << endl;
+    }
+
+    // #18 - TrimLeft
+    {
+        CSuperString ssSource1("   Hello World");
+
+        cout << "#18 - TrimLeft" << endl;
+        cout << ssSource1.TrimLeft() << endl << endl;
+    }
+
+    // #19 - TrimRight
+    {
+        CSuperString ssSource1("Hello World   ");
+
+        cout << "#19 - TrimRight" << endl;
+        cout << ssSource1.TrimRight() << endl << endl;
+    }
+
+    // #20 - Trim
+    {
+        CSuperString ssSource1("   Hello World   ");
+
+        cout << "#20 - Trim" << endl;
+        cout << ssSource1.Trim() << endl << endl;
+    }
+
+    system("pause");
+    return 0;
+}
+
